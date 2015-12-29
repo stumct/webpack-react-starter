@@ -7,7 +7,9 @@ Dev Dependencies
   npm i html-webpack-plugin --save-dev (creates your html for you with webpack bundles in script tags)
   npm i webpack-dev-server --save-dev (in memory dev server which refreshes content)
   npm i file-loader --save-dev ()
+  npm i url-loader --save-dev ()
   npm i css-loader style-loader --save-dev (allows us to refresh css changes)
+  npm i less less-loader --save-dev ()
   npm i babel-loader@5.x --save-dev (babel transpiles es6+ to es5)
   npm i babel-plugin-react-transform@v1.1.1 react-transform-hmr --save-dev (this one works)
   npm i babel-eslint eslint eslint-plugin-react --save-dev (for linting JS)
@@ -15,6 +17,8 @@ Dev Dependencies
 
 Dependencies
   npm i react react-dom --save (install React and ReactDOM)
+  npm i jquery --save ()
+  npm i bootstrap --save ()
 
 
 
@@ -28,6 +32,7 @@ package.json (ADD)
 .gitignore (CREATE)
   ////////////////////
   node_modules
+  dist
   ////////////////////
 
 .babelrc (CREATE)
@@ -59,26 +64,10 @@ package.json (ADD)
 
 webpack.config.js (CREATE)
   ////////////////////
-  module.exports = {
-    context: __dirname,
-    entry: {
-      javascript: "./src/main.js",
-      html: "./src/index.html",
-    },
 
-    output: {
-      filename: "bundle.js",
-      path: __dirname + "/dist",
-    },
-    module: {
-      loaders: [{
-        test: /\.(js|jsx)$/,
-        exclude: /node_modules/,
-        loaders: ["babel-loader"],
-      }, {
-        test: /\.html$/,
-        loader: "file?name=[name].[ext]",
-      }],
-    }
-  }
   ////////////////////
+
+
+
+USEFUL LINKS
+http://christianalfoni.github.io/react-webpack-cookbook/
