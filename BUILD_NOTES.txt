@@ -22,52 +22,15 @@ Dependencies
   npm i redux react-redux redux-thunk --save
   npm i react-router history redux-simple-router --save
 
-package.json (ADD)
-  ////////////////////
-  "scripts": {
-    "start": "webpack-dev-server"
-  },
-  ////////////////////
 
-.gitignore (CREATE)
-  ////////////////////
-  node_modules
-  dist
-  ////////////////////
-
-.babelrc (CREATE)
-  ////////////////////
-  {
-    "env": {
-      "development": {
-        "plugins": [
-          "react-transform"
-        ],
-        "extra": {
-          "react-transform": {
-            "transforms": [{
-              "transform": "react-transform-hmr",
-              "imports": ["react"],
-              "locals": ["module"]
-            }]
-          }
-        }
-      }
-    },
-    "optional": [
-      "es7.classProperties",
-      "es7.decorators",
-      "es7.objectRestSpread"
-    ]
-  }
-  ////////////////////
-
-webpack.config.js (CREATE)
-  ////////////////////
-
-  ////////////////////
-
+package.json
+.gitignore
+.babelrc
+webpack.config.js
 
 
 USEFUL LINKS
+http://rackt.org/redux/
+https://github.com/rackt/redux-simple-router
+https://github.com/gaearon/redux-thunk
 http://christianalfoni.github.io/react-webpack-cookbook/
