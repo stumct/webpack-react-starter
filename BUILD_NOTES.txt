@@ -19,8 +19,8 @@ Dependencies
   npm i react react-dom --save (install React and ReactDOM)
   npm i jquery --save ()
   npm i bootstrap --save ()
-
-
+  npm i redux react-redux redux-thunk --save
+  npm i react-router history redux-simple-router --save
 
 package.json (ADD)
   ////////////////////
